@@ -40,7 +40,7 @@ End-to-end SaaS enabling users to orchestrate distributed background jobs and AI
 - Implemented full SaaS infrastructure: auth, billing, error tracking, and type-safe API layer
 
 ### Chirp - Full-Stack Social Media Platform
-[View Project →](https://github.com/hyperactive-panda111/chirp)
+[View Project →](https://github.com/hyperactive-panda111/twit-clone)
 
 Modern social media application with real-time capabilities and infinite scrolling.
 
