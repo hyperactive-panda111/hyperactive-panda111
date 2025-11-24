@@ -31,7 +31,7 @@ CPU-based graphics pipeline built from scratch without any graphics APIs.
 - Implemented complete rendering pipeline without external graphics APIs: transformations, clipping, rasterization, Z-buffering
 
 ### Workflow Automation Platform
-[View Project →](https://github.com/hyperactive-panda111/workflow-automation)
+[View Project →](https://github.com/hyperactive-panda111/nodebase)
 
 End-to-end SaaS enabling users to orchestrate distributed background jobs and AI integrations through a visual workflow builder.
 
