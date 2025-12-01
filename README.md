@@ -28,7 +28,7 @@ Full-stack graphic design SaaS with real-time canvas editing and subscription bi
 - Integrated Stripe for subscription billing, Unsplash/Uploadthing APIs for asset management
 
 ### [Software-Based 3D Graphics Engine](https://github.com/hyperactive-panda111/3dsoftwarerenderer)
-
+[View Code](https://github.com/hyperactive-panda111/3dsoftwarerenderer)
 CPU-based graphics pipeline built from scratch without any graphics APIs.
 
 ![Fighter Jet Textured](https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExNjdqMWM2NGF2dmN0bTNzZmU5dWYwcWlsaG9qMzZzbmJiN3dpaDZpNyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/HhhSdDA9dUYijGsrrS/giphy.gif)
