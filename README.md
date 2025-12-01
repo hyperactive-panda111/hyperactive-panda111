@@ -18,8 +18,16 @@ Stripe • Sentry • Cloudinary • Vercel • CI/CD Pipelines
 
 ## 💼 What I've Built
 
-### Software-Based 3D Graphics Engine
-[View Project →](https://github.com/hyperactive-panda111/3d-software-renderer)
+### [Canva Clone - Graphic Design SaaS](https://github.com/hyperactive-panda111/canva_clone)
+[🔗 Live Demo](https://canva-clone-sigma.vercel.app/) | [View Code](https://github.com/hyperactive-panda111/canva_clone)
+
+Full-stack graphic design SaaS with real-time canvas editing and subscription billing.
+- Reduced database write operations by 70% (from 1000+ writes/second to 1/second) through debounced autosave
+- Solved race condition between autosave and undo operations via custom skip-flag mechanism
+- Architected backend API with Next.js, Hono.js, and NeonDB for multi-tenant design storage
+- Integrated Stripe for subscription billing, Unsplash/Uploadthing APIs for asset management
+
+### [Software-Based 3D Graphics Engine](https://github.com/hyperactive-panda111/3dsoftwarerenderer)
 
 CPU-based graphics pipeline built from scratch without any graphics APIs.
 
@@ -30,31 +38,35 @@ CPU-based graphics pipeline built from scratch without any graphics APIs.
 - Built OBJ model loader and perspective-correct texture mapping for realistic rendering
 - Implemented complete rendering pipeline without external graphics APIs: transformations, clipping, rasterization, Z-buffering
 
-### Workflow Automation Platform
-[View Project →](https://github.com/hyperactive-panda111/nodebase)
+### Workflow Automation Platform(https://github.com/hyperactive-panda111/nodebase)
+[🔗 Live Demo](https://nodebase-lyart.vercel.app/) | [View Code](https://github.com/hyperactive-panda111/nodebase)
 
 End-to-end SaaS enabling users to orchestrate distributed background jobs and AI integrations through a visual workflow builder.
 
 - Architected workflow orchestration engine with durable job execution using Inngest
-- Built unified AI integration layer abstracting OpenAI, Claude, and Gemini APIs with rate-limit handling
-- Implemented full SaaS infrastructure: auth, billing, error tracking, and type-safe API layer
+- Built unified AI integration layer abstracting OpenAI, Claude, and Gemini APIs with rate-limit handling and LLM observability via Sentry
+- Implemented real-time execution monitoring via Inngest's WebSocket package, enabling serverless deployment on Vercel
+- Integrated full SaaS infrastructure: Better Auth, Polar billing, type-safe tRPC APIs, React Flow canvas
 
-### Chirp - Full-Stack Social Media Platform
-[View Project →](https://github.com/hyperactive-panda111/twit-clone)
+
+### Chirp - Full-Stack Social Media Platform(https://github.com/hyperactive-panda111/twit-clone)
+[View Code](https://github.com/hyperactive-panda111/twit-clone)
 
 Modern social media application with real-time capabilities and infinite scrolling.
 
-- Built full authentication system with Clerk and user profile management
+- Achieved 65% reduction in media file sizes via ImageKit compression optimization
 - Implemented infinite-scrolling feed with React Query for optimized data fetching
-- Integrated ImageKit for scalable image hosting and Prisma ORM with Neon PostgreSQL
-- Designed responsive UI with Tailwind CSS and Socket.IO infrastructure for real-time features
+- Built authentication system with Clerk and integrated Socket.IO for real-time features
+- Designed responsive UI with Tailwind CSS and Prisma ORM with Neon PostgreSQL
 
 ## 📊 Impact Highlights
 
-- Reduced PostgreSQL load by **70%** with debounce-based autosave optimization
-- Improved CPU rendering performance by **50%** through algorithmic optimizations
-- Built concurrency-safe Stripe webhook infrastructure for reliable billing
-- Designed zero-downtime CI/CD pipelines on Vercel
+## 📊 Impact Highlights
+
+- **Canva Clone:** Reduced PostgreSQL load by 70% (1000+ writes/sec → 1/sec) with debounced autosave
+- **3D Graphics Engine:** Improved CPU rendering by 50% through backface culling and frustum clipping  
+- **Chirp:** Achieved 65% file size reduction via ImageKit compression optimization
+- **Production Infrastructure:** Built concurrency-safe Stripe webhooks and zero-downtime CI/CD on Vercel
 
 ## 📫 Let's Connect
 
