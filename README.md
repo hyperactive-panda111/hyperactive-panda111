@@ -37,7 +37,7 @@ CPU-based graphics pipeline built from scratch without any graphics APIs.
 - Built OBJ model loader and perspective-correct texture mapping for realistic rendering
 - Implemented complete rendering pipeline without external graphics APIs: transformations, clipping, rasterization, Z-buffering
 
-### Workflow Automation Platform(https://github.com/hyperactive-panda111/nodebase)
+### [Workflow Automation Platform](https://github.com/hyperactive-panda111/nodebase)
 [🔗 Live Demo](https://nodebase-lyart.vercel.app/)
 
 End-to-end SaaS enabling users to orchestrate distributed background jobs and AI integrations through a visual workflow builder.
@@ -48,7 +48,7 @@ End-to-end SaaS enabling users to orchestrate distributed background jobs and AI
 - Integrated full SaaS infrastructure: Better Auth, Polar billing, type-safe tRPC APIs, React Flow canvas
 
 
-### Chirp - Full-Stack Social Media Platform(https://github.com/hyperactive-panda111/twit-clone)
+### [Chirp - Full-Stack Social Media Platform](https://github.com/hyperactive-panda111/twit-clone)
 
 Modern social media application with real-time capabilities and infinite scrolling.
 
