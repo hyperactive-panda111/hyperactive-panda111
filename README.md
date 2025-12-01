@@ -19,7 +19,7 @@ Stripe • Sentry • Cloudinary • Vercel • CI/CD Pipelines
 ## 💼 What I've Built
 
 ### [Canva Clone - Graphic Design SaaS](https://github.com/hyperactive-panda111/canva_clone)
-[🔗 Live Demo](https://canva-clone-sigma.vercel.app/) | [View Code](https://github.com/hyperactive-panda111/canva_clone)
+[🔗 Live Demo](https://canva-clone-sigma.vercel.app/)
 
 Full-stack graphic design SaaS with real-time canvas editing and subscription billing.
 - Reduced database write operations by 70% (from 1000+ writes/second to 1/second) through debounced autosave
@@ -28,7 +28,6 @@ Full-stack graphic design SaaS with real-time canvas editing and subscription bi
 - Integrated Stripe for subscription billing, Unsplash/Uploadthing APIs for asset management
 
 ### [Software-Based 3D Graphics Engine](https://github.com/hyperactive-panda111/3dsoftwarerenderer)
-[View Code](https://github.com/hyperactive-panda111/3dsoftwarerenderer)
 CPU-based graphics pipeline built from scratch without any graphics APIs.
 
 ![Fighter Jet Textured](https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExNjdqMWM2NGF2dmN0bTNzZmU5dWYwcWlsaG9qMzZzbmJiN3dpaDZpNyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/HhhSdDA9dUYijGsrrS/giphy.gif)
@@ -39,7 +38,7 @@ CPU-based graphics pipeline built from scratch without any graphics APIs.
 - Implemented complete rendering pipeline without external graphics APIs: transformations, clipping, rasterization, Z-buffering
 
 ### Workflow Automation Platform(https://github.com/hyperactive-panda111/nodebase)
-[🔗 Live Demo](https://nodebase-lyart.vercel.app/) | [View Code](https://github.com/hyperactive-panda111/nodebase)
+[🔗 Live Demo](https://nodebase-lyart.vercel.app/)
 
 End-to-end SaaS enabling users to orchestrate distributed background jobs and AI integrations through a visual workflow builder.
 
@@ -50,7 +49,6 @@ End-to-end SaaS enabling users to orchestrate distributed background jobs and AI
 
 
 ### Chirp - Full-Stack Social Media Platform(https://github.com/hyperactive-panda111/twit-clone)
-[View Code](https://github.com/hyperactive-panda111/twit-clone)
 
 Modern social media application with real-time capabilities and infinite scrolling.
 
@@ -58,8 +56,6 @@ Modern social media application with real-time capabilities and infinite scrolli
 - Implemented infinite-scrolling feed with React Query for optimized data fetching
 - Built authentication system with Clerk and integrated Socket.IO for real-time features
 - Designed responsive UI with Tailwind CSS and Prisma ORM with Neon PostgreSQL
-
-## 📊 Impact Highlights
 
 ## 📊 Impact Highlights
 
