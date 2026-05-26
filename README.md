@@ -1,6 +1,8 @@
 # Hey, I'm Yaw 👋
 
-Backend engineer from Accra, Ghana, specializing in **distributed systems** and **scalable SaaS architectures**. I build resilient, low-latency systems and solve concurrency challenges in production environments.
+I'm drawn to problems where constraints are not obstacles but the source of elegant solutions. The limited instruction set that forces clever sequencing. The fixed register file that demands precise state management. The flat memory model that turns out to be sufficient substrate for arbitrarily complex computation. These are the problems I find most interesting — and building them from scratch is how I understand them.
+
+My focus is on the infrastructure layer that other software depends on but rarely sees.
 
 ## 🔧 What I Work With
 
@@ -18,58 +20,64 @@ Stripe • Sentry • Cloudinary • Vercel • CI/CD Pipelines
 
 ## 💼 What I've Built
 
-### [Canva Clone - Graphic Design SaaS](https://github.com/hyperactive-panda111/canva_clone)
-[🔗 Live Demo](https://canva-clone-sigma.vercel.app/)
+## Systems Work
 
-Full-stack graphic design SaaS with real-time canvas editing and subscription billing.
-- Reduced database write operations by 70% (from 1000+ writes/second to 1/second) through debounced autosave
-- Solved race condition between autosave and undo operations via custom skip-flag mechanism
-- Architected backend API with Next.js, Hono.js, and NeonDB for multi-tenant design storage
-- Integrated Stripe for subscription billing, Unsplash/Uploadthing APIs for asset management
+### [Nand2Tetris — Computing Platform from First Principles](https://github.com/hyperactive-panda111/nand2tetris)
 
-### [Software-Based 3D Graphics Engine](https://github.com/hyperactive-panda111/3dsoftwarerenderer)
-CPU-based graphics pipeline built from scratch without any graphics APIs.
+Built a complete computing platform from NAND gates upward — boolean logic, combinational and sequential chips, ALU, CPU, memory, assembler, and a full two-tier VM translator. Every layer implemented by hand in HDL and C.
+
+The VM translator is the centrepiece — a pipeline that translates stack-based bytecode into Hack assembly, implementing virtual memory segments, arithmetic and logical operations, and a complete function calling convention in generated assembly code. Custom infrastructure throughout: a hand-written tokenizer using an anchor/scout two-pointer strategy, a djb2 hash table for O(1) command lookup, and a typed dispatch pipeline routing to focused assembly emission functions. Both chapters reviewed by CodeRabbit at complexity rating 4.
+
+The calling convention implementation — frame setup, register preservation, stack unwinding, return address resolution — is entirely expressed in generated assembly. No hardware call instruction doing the work behind the scenes.
+
+
+### [Real time 3d Graphics Engine](https://github.com/hyperactive-panda111/3dsoftwarerenderer)
+
+A complete CPU-based graphics pipeline built without graphics APIs — SDL for windowing only, everything else by hand. Perspective-correct texture mapping, Z-buffering, six-plane frustum clipping, backface culling, OBJ model loading, and a first-person camera system.
 
 ![Fighter Jet Textured](https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExNjdqMWM2NGF2dmN0bTNzZmU5dWYwcWlsaG9qMzZzbmJiN3dpaDZpNyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/HhhSdDA9dUYijGsrrS/giphy.gif)
 ![Lobster Wireframe](https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExOTg5ZnFvbmc5bWl5Zm80eTB1aXM3ODIxMTBkanh6ajI5YXBiY2ZkMCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/nLr7jMBivNf5VcECJl/giphy.gif)
+
+
+Perspective-correct texture mapping required understanding that texture coordinates must be interpolated in clip space rather than screen space — dividing by W at each pixel rather than interpolating linearly across the triangle. Getting that right without an API enforcing it meant understanding why it matters, not just that it does.
+
+Achieved 30 FPS rendering of complex geometry through cache-optimised data layout and early rejection via backface culling and frustum clipping before rasterization.
 
 - Achieved 30 FPS rendering of 10,000 vertices with 50% CPU performance improvement through backface culling, six-plane frustum clipping, and cache-optimized data layout
 - Built OBJ model loader and perspective-correct texture mapping for realistic rendering
 - Implemented complete rendering pipeline without external graphics APIs: transformations, clipping, rasterization, Z-buffering
 
-### [Workflow Automation Platform](https://github.com/hyperactive-panda111/nodebase)
-[🔗 Live Demo](https://nodebase-lyart.vercel.app/)
+## Production Work
 
-End-to-end SaaS enabling users to orchestrate distributed background jobs and AI integrations through a visual workflow builder.
+### [Canva Clone — Graphic Design SaaS](https://github.com/hyperactive-panda111/canva_clone)
 
-- Architected workflow orchestration engine with durable job execution using Inngest
-- Built unified AI integration layer abstracting OpenAI, Claude, and Gemini APIs with rate-limit handling and LLM observability via Sentry
-- Implemented real-time execution monitoring via Inngest's WebSocket package, enabling serverless deployment on Vercel
-- Integrated full SaaS infrastructure: Better Auth, Polar billing, type-safe tRPC APIs, React Flow canvas
+Full-stack design tool with real-time canvas editing and subscription billing. The interesting engineering problem was autosave — naive implementations produced 1000+ database writes per second under normal usage. Solved via debounced autosave with a custom skip-flag mechanism to resolve a race condition between the autosave timer and the undo stack. Reduced write load by 70%.
 
+### [Nodebase — Workflow Automation Platform](https://github.com/hyperactive-panda111/nodebase)
 
-### [Chirp - Full-Stack Social Media Platform](https://github.com/hyperactive-panda111/twit-clone)
+Visual workflow builder for orchestrating distributed background jobs and AI integrations. Built a unified abstraction layer over OpenAI, Claude, and Gemini APIs with rate-limit handling and LLM observability. Durable job execution via Inngest with real-time monitoring over WebSockets.
 
-Modern social media application with real-time capabilities and infinite scrolling.
+## What I Read
 
-- Achieved 65% reduction in media file sizes via ImageKit compression optimization
-- Implemented infinite-scrolling feed with React Query for optimized data fetching
-- Built authentication system with Clerk and integrated Socket.IO for real-time features
-- Designed responsive UI with Tailwind CSS and Prisma ORM with Neon PostgreSQL
+The preparation is part of the work. These shaped how I think about the problems above:
 
-## 📊 Impact Highlights
-
-- **Canva Clone:** Reduced PostgreSQL load by 70% (1000+ writes/sec → 1/sec) with debounced autosave
-- **3D Graphics Engine:** Improved CPU rendering by 50% through backface culling and frustum clipping  
-- **Chirp:** Achieved 65% file size reduction via ImageKit compression optimization
-- **Production Infrastructure:** Built concurrency-safe Stripe webhooks and zero-downtime CI/CD on Vercel
-
-## 📫 Let's Connect
-
-- Portfolio: [Portfolio Website](https://3js-portfolio-ivory.vercel.app/)
-- LinkedIn: [LinkedIn Profile](https://www.linkedin.com/in/amo-mensah/)
-- Email: yawamomensah@gmail.com
+- Bryant & O'Hallaron — *Computer Systems: A Programmer's Perspective*
+- Kernighan & Ritchie — *The C Programming Language*
+- Petzold — *Code: The Hidden Language of Computer Hardware and Software*
+- Nisan & Schocken — *The Elements of Computing Systems*
+- Zingaro — *Algorithmic Thinking* (2nd edition)
+- Null & Lobur — *The Essentials of Computer Organization and Architecture*
+- Mak — *Writing Compilers and Interpreters*
 
 ---
 
-💡 Currently open to **remote backend engineering opportunities** where I can work on distributed systems and performance-critical infrastructure.
+## Currently
+
+Working through the compiler chapters of Nand2Tetris — translating a high-level object-oriented language to VM bytecode — and deepening systems knowledge through CS:APP.
+
+Open to roles in systems programming, graphics engineering, compiler infrastructure, or any domain where the interesting problems live close to the hardware.
+
+---
+
+📧 yawamomensah@gmail.com
+🔗 [LinkedIn](https://www.linkedin.com/in/amo-mensah/)
