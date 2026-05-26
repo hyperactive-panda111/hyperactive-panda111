@@ -20,6 +20,9 @@ The compiler front-end — the most recent stage — translates Jack source text
 
 A complete CPU-based graphics pipeline built without graphics APIs — SDL for windowing only, everything else by hand. Perspective-correct texture mapping, Z-buffering, six-plane frustum clipping, backface culling, OBJ model loading, and a first-person camera system.
 
+![Lobster Flat Shading](https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExNjdqMWM2NGF2dmN0bTNzZmU5dWYwcWlsaG9qMzZzbmJiN3dpaDZpNyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/HhhSdDA9dUYijGsrrS/giphy.gif)
+![Lobster Wireframe](https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExOTg5ZnFvbmc5bWl5Zm80eTB1aXM3ODIxMTBkanh6ajI5YXBiY2ZkMCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/nLr7jMBivNf5VcECJl/giphy.gif)
+
 The first working version used the painter's algorithm — sorting triangles back-to-front by average Z depth. The failure cases revealed themselves quickly: triangles that overlap in depth cannot be correctly ordered regardless of sort order, and the per-frame sort cost grows with scene complexity. The pivot to Z-buffering resolved both: O(1) per-pixel depth resolution at the cost of a full-resolution float array in memory. A conscious tradeoff, not a discovered one.
 
 Perspective-correct texture mapping required understanding that texture coordinates must be interpolated in clip space rather than screen space — dividing by W at each pixel rather than interpolating linearly across the triangle. The distortion this corrects is the same affine warping visible on PlayStation 1 geometry, where the hardware skipped the divide for cost reasons.
