@@ -52,7 +52,7 @@ The preparation is part of the work. These shaped how I think about the problems
 - Petzold — *Code: The Hidden Language of Computer Hardware and Software*
 - Nisan & Schocken — *The Elements of Computing Systems*
 - Zingaro — *Algorithmic Thinking* (2nd edition)
-- Null & Lobur — *The Essentials of Computer Organization and Architecture*
+- Null  — *The Essentials of Computer Organization and Architecture*
 - Mak — *Writing Compilers and Interpreters*
 
 ---
@@ -67,4 +67,3 @@ Open to roles in systems programming, graphics engineering, compiler infrastruct
 
 📧 yawamomensah@gmail.com
 🔗 [LinkedIn](https://www.linkedin.com/in/amo-mensah/)
-🌐 [Portfolio](https://3js-portfolio-ivory.vercel.app/)
