@@ -2,7 +2,7 @@
 
 **Backend Engineer & Systems Programmer** Systems-minded engineer focused on low-level performance, distributed architectures, and infrastructure that operates close to the hardware.
 
-📧 yawamomensah@gmail.com | 🔗 [LinkedIn](https://www.linkedin.com/in/amo-mensah/) | 🌐 [Portfolio](https://3js-portfolio-ivory.vercel.app/)
+📧 yawamomensah@gmail.com | 🔗 [LinkedIn](https://www.linkedin.com/in/amo-mensah/)
 
 ---
 
